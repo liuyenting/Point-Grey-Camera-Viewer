@@ -1,0 +1,6 @@
+# GCC debug folder
+*.dSYM
+
+# Captured images.
+*.ppm
+*.pgm
