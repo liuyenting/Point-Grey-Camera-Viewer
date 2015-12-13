@@ -75,11 +75,11 @@ IplImage * dc1394_frame_to_iplimage(dc1394video_frame_t *frame) {
 	dc1394video_mode_t video_mode = frame->video_mode;
 	CvSize size = cvSize(frame->size[0], frame->size[1]);
 
+	// RGB8 has 3 bytes per pixel.
 	IplImage *tmp = cvCreateImageHeader(size, IPL_DEPTH_8U, 3);
 	cvSetData(tmp, frame->image, size.width*3);
 
 	img = cvCreateImage(size, IPL_DEPTH_8U, tmp->nChannels);
-	// cvCopy(tmp, img, 0);
 	cvCvtColor(tmp, img, CV_RGB2BGR);
 
 	cvReleaseImageHeader(&tmp);
