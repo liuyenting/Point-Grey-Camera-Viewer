@@ -1,15 +1,25 @@
+export PKG_CONFIG_PATH = /opt/local/lib/PKG_CONFIG_PATH
+export LD_LIBRARY_PATH = /opt/local/lib
+
 CC = gcc
-CCFLAGS = -g
+CCFLAGS =
 LDFLAGS = -L /opt/local/lib -l dc1394.22
 
-EXECUTABLE = grab-image
+SOURCES = $(wildcard *.c)
+OBJECTS = $(SOURCES:.c=.o)
+TARGET = grab-image
 
-all: main
+all: $(TARGET)
 
-main: main.c
-	$(CC) $(CCFLAGS) $(LDFLAGS) main.c -o $(EXECUTABLE)
+$(TARGET): $(OBJECTS)
+	$(CC) -o $@ $^ $(LDFLAGS)
+
+%.o: %.c %.h
+	$(CC) $(CCFLAGS) $(LDFLAGS) -c $<
+
+%.o: %.c
+	$(CC) $(CCFLAGS) $(LDFLAGS) -c $<
 
 clean:
-	rm $(EXECUTABLE)
-	rm -r *.dSYM
-	rm *.ppm
+	rm -f *.o $(TARGET)
+	rm -f *.ppm
