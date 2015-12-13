@@ -30,7 +30,6 @@ int main(int argc, char *argv[]) {
 
 	IplImage *img;
 	open_display("Live Preview");
-	fprintf(stderr, "open_display() complete");
 
 	capture = 1;
 	start_capture(&camera);
@@ -38,7 +37,7 @@ int main(int argc, char *argv[]) {
 	while(capture) {
 		img = grab_frame(&camera, &frame);
 		cvShowImage("Live Preview", img);
-		cvWaitKey(5);
+		cvWaitKey(1);
 	}
 
 	close_display();
