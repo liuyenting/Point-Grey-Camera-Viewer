@@ -2,6 +2,7 @@
 
 #include <stdlib.h> // EXIT_FAILURE
 #include <inttypes.h> // PRIx64
+#include <opencv/cv.h>
 
 dc1394error_t error;
 
@@ -69,9 +70,30 @@ dc1394error_t start_capture(dc1394camera_t **camera) {
 	start_transmission(camera);
 }
 
-dc1394error_t grab_frame(dc1394camera_t **camera, dc1394video_frame_t **frame) {
+IplImage * dc1394_frame_to_iplimage(dc1394video_frame_t *frame) {
+	IplImage *img;
+	dc1394video_mode_t video_mode = frame->video_mode;
+	CvSize size = cvSize(frame->size[0], frame->size[1]);
+
+	IplImage *tmp = cvCreateImageHeader(size, IPL_DEPTH_8U, 3);
+	cvSetData(tmp, frame->image, size.width*3);
+
+	img = cvCreateImage(size, IPL_DEPTH_8U, tmp->nChannels);
+	cvCopy(tmp, img, 0);
+
+	cvReleaseImageHeader(&tmp);
+	return img;
+}
+
+IplImage * grab_frame(dc1394camera_t **camera, dc1394video_frame_t **frame) {
 	error = dc1394_capture_dequeue(*camera, DC1394_CAPTURE_POLICY_WAIT, frame);
-	DC1394_ERR_CLN_RTN(error, STOP_AND_FREE(camera), "Unable to capture");
+	DC1394_ERR_CLN(error, STOP_AND_FREE(camera), "Unable to capture");
+
+	IplImage *img = dc1394_frame_to_iplimage(*frame);
+
+	dc1394_capture_enqueue(*camera, *frame);
+
+	return img;
 }
 
 dc1394error_t stop_capture(dc1394camera_t **camera) {
