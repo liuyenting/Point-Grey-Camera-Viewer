@@ -79,7 +79,8 @@ IplImage * dc1394_frame_to_iplimage(dc1394video_frame_t *frame) {
 	cvSetData(tmp, frame->image, size.width*3);
 
 	img = cvCreateImage(size, IPL_DEPTH_8U, tmp->nChannels);
-	cvCopy(tmp, img, 0);
+	// cvCopy(tmp, img, 0);
+	cvCvtColor(tmp, img, CV_RGB2BGR);
 
 	cvReleaseImageHeader(&tmp);
 	return img;
