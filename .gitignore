@@ -6,4 +6,5 @@
 *.pgm
 
 # Binaries
+*.o
 grab-image
