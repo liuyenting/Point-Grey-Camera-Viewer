@@ -1,5 +1,5 @@
-#ifndef __MAIN_H__
-#define __MAIN_H__
+#ifndef __CAMERA_H__
+#define __CAMERA_H__
 
 #include <dc1394/dc1394.h>
 
