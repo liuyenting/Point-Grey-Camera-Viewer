@@ -4,3 +4,6 @@
 # Captured images.
 *.ppm
 *.pgm
+
+# Binaries
+grab-image
