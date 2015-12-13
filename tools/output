@@ -1,0 +1,198 @@
+------ Camera information ------
+Vendor                            :     Point Grey Research
+Model                             :     Flea3 FL3-U3-88S2C
+Unit                              :     0
+Specifications ID                 :     0xa02d
+Software revision                 :     0x102
+IIDC version code                 :     549
+Unit directory offset             :     0x428
+Unit dependent directory offset   :     0x440
+Commands registers base           :     0xf00000
+Unique ID                         :     0x00b09d0100ea9312
+Vendor ID                         :     0xb09d
+Model ID                          :     0x1
+Advanced features found at offset :     0xf01000
+1394b mode capable (>=800Mbit/s)  :     Yes
+Platform backend                  :     usb
+------ Camera platform-specific information ------
+USB Bus Number                    :     20
+USB Device Address                :     23
+Vendor ID                         :     0x1e10
+Product ID                        :     0x3300
+------ Features report ------
+OP   - one push capable
+RC   - readout capable
+O/OC - on/off capable
+AC   - auto capable
+MC   - manual capable
+ABS  - absolute capable
+-----------------------------
+Brightness:
+	RC  MC  (active is: MAN)  ABS  
+	min: 0 max 255
+	current value is: 50
+	absolute settings:
+	 value: 4.882812
+	 min: 0.000000
+	 max: 24.902344
+Exposure:
+	RC  O/OC  MC  (active is: AUTO)  AC  (active is: AUTO)  OP  (active is: AUTO)  ABS  
+	Feature: ON  min: 1 max 1023
+	current value is: 425
+	absolute settings:
+	 value: 1.146362
+	 min: -7.584961
+	 max: 2.413635
+Sharpness:
+	RC  O/OC  MC  (active is: AUTO)  AC  (active is: AUTO)  
+	Feature: ON  min: 0 max 4095
+	current value is: 512
+White Balance:
+	NOT AVAILABLE
+Hue:
+	RC  O/OC  MC  (active is: MAN)  ABS  
+	Feature: OFF  min: 0 max 4095
+	current value is: 2048
+	absolute settings:
+	 value: 0.000000
+	 min: -180.000000
+	 max: 179.912109
+Saturation:
+	RC  O/OC  MC  (active is: MAN)  AC  (active is: MAN)  ABS  
+	Feature: OFF  min: 0 max 4095
+	current value is: 512
+	absolute settings:
+	 value: 50.000000
+	 min: 0.000000
+	 max: 399.902344
+Gamma:
+	RC  O/OC  MC  (active is: MAN)  ABS  
+	Feature: OFF  min: 512 max 4095
+	current value is: 1332
+	absolute settings:
+	 value: 1.300781
+	 min: 0.500000
+	 max: 3.999023
+Shutter:
+	RC  MC  (active is: AUTO)  AC  (active is: AUTO)  OP  (active is: AUTO)  ABS  
+	min: 1 max 2161
+	current value is: 2161
+	absolute settings:
+	 value: 0.033311
+	 min: 0.000015
+	 max: 0.033311
+Gain:
+	RC  MC  (active is: AUTO)  AC  (active is: AUTO)  OP  (active is: AUTO)  ABS  
+	min: 0 max 1920
+	current value is: 1668
+	absolute settings:
+	 value: 14.630740
+	 min: 0.000000
+	 max: 24.082386
+Iris:
+	NOT AVAILABLE
+Focus:
+	NOT AVAILABLE
+Temperature:
+	RC  ABS  
+	min: 2231 max 4095
+	Target temp: 12005376 Current Temp: 3212
+	absolute settings:
+	 value: 321.160004
+	 min: 0.000000
+	 max: inf
+Trigger:
+	RC  O/OC  
+	Feature: OFF  
+	AvailableTriggerModes: 384 385 391 
+	AvailableTriggerSources: 576 578 579 580 
+	Polarity Change Capable: True
+	Current Polarity: NEG
+	current mode: 384
+
+	current source: 576
+Trigger Delay:
+	RC  O/OC  MC  (active is: MAN)  ABS  
+	Feature: OFF  min: 0 max 4095
+	current value is: 0
+	absolute settings:
+	 value: 0.000000
+	 min: 0.000000
+	 max: 0.033333
+White Shading:
+	NOT AVAILABLE
+Frame Rate:
+	RC  O/OC  MC  (active is: MAN)  AC  (active is: MAN)  ABS  
+	Feature: ON  min: 477 max 3338
+	current value is: 1152
+	absolute settings:
+	 value: 30.000000
+	 min: 2.080823
+	 max: 55.172413
+Zoom:
+	NOT AVAILABLE
+Pan:
+	NOT AVAILABLE
+Tilt:
+	NOT AVAILABLE
+Optical Filter:
+	NOT AVAILABLE
+Capture Size:
+	NOT AVAILABLE
+Capture Quality:
+	NOT AVAILABLE
+------ Supported Video Modes ------
+Mode: DC1394_VIDEO_MODE_1600x1200_YUV422
+Frame Rates:
+  [0] rate = 1.875000
+  [1] rate = 3.750000
+  [2] rate = 7.500000
+  [3] rate = 15.000000
+Mode: DC1394_VIDEO_MODE_1600x1200_RGB8
+Frame Rates:
+  [0] rate = 1.875000
+  [1] rate = 3.750000
+  [2] rate = 7.500000
+  [3] rate = 15.000000
+Mode: DC1394_VIDEO_MODE_1600x1200_MONO8
+Frame Rates:
+  [0] rate = 1.875000
+  [1] rate = 3.750000
+  [2] rate = 7.500000
+  [3] rate = 15.000000
+Mode: DC1394_VIDEO_MODE_1600x1200_MONO16
+Frame Rates:
+  [0] rate = 1.875000
+  [1] rate = 3.750000
+  [2] rate = 7.500000
+  [3] rate = 15.000000
+Mode: DC1394_VIDEO_MODE_FORMAT7_0
+Image Sizes:
+  size = 4096x2160
+  max = 4096x2160
+  pixels = 8847360
+Color:
+  [0] coding = DC1394_COLOR_CODING_MONO8
+  [1] coding = DC1394_COLOR_CODING_YUV411
+  [2] coding = DC1394_COLOR_CODING_YUV422
+  [3] coding = DC1394_COLOR_CODING_YUV444
+  [4] coding = DC1394_COLOR_CODING_RGB8
+  [5] coding = DC1394_COLOR_CODING_MONO16
+  [6] coding = DC1394_COLOR_CODING_RAW8
+  [7] coding = DC1394_COLOR_CODING_RAW16
+  filter = DC1394_COLOR_FILTER_RGGB
+Mode: DC1394_VIDEO_MODE_FORMAT7_4
+Image Sizes:
+  size = 1280x962
+  max = 2048x1080
+  pixels = 1231360
+Color:
+  [0] coding = DC1394_COLOR_CODING_MONO8
+  [1] coding = DC1394_COLOR_CODING_YUV411
+  [2] coding = DC1394_COLOR_CODING_YUV422
+  [3] coding = DC1394_COLOR_CODING_YUV444
+  [4] coding = DC1394_COLOR_CODING_RGB8
+  [5] coding = DC1394_COLOR_CODING_MONO16
+  [6] coding = DC1394_COLOR_CODING_RAW8
+  [7] coding = DC1394_COLOR_CODING_RAW16
+  filter = DC1394_COLOR_FILTER_RGGB

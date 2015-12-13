@@ -37,7 +37,7 @@ dc1394error_t open_device(dc1394_t **obj, dc1394camera_t **camera) {
 	dc1394_capture_stop(*camera);
 
 	// Preset the acquisition speed.
-	dc1394_video_set_iso_speed(*camera, DC1394_ISO_SPEED_400);
+	dc1394_video_set_iso_speed(*camera, DC1394_ISO_SPEED_3200);
 }
 
 dc1394error_t set_acq_param(dc1394camera_t **camera, int width, int height, dc1394framerate_t frame_rate) {
