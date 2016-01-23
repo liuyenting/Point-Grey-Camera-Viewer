@@ -41,6 +41,7 @@ dc1394error_t open_device(dc1394_t **obj, dc1394camera_t **camera) {
 }
 
 dc1394error_t set_acq_param(dc1394camera_t **camera, int width, int height, dc1394framerate_t frame_rate) {
+	// TODO: Calcualte the center ROI position.
 	error = dc1394_format7_set_roi(*camera,
 	                               DC1394_VIDEO_MODE_FORMAT7_4, // Custom format, mode 4.
 	                               DC1394_COLOR_CODING_RGB8, // 24-bit RGB output.

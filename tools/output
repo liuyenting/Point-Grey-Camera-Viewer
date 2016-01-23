@@ -16,7 +16,7 @@ Advanced features found at offset :     0xf01000
 Platform backend                  :     usb
 ------ Camera platform-specific information ------
 USB Bus Number                    :     20
-USB Device Address                :     23
+USB Device Address                :     22
 Vendor ID                         :     0x1e10
 Product ID                        :     0x3300
 ------ Features report ------
@@ -38,9 +38,9 @@ Brightness:
 Exposure:
 	RC  O/OC  MC  (active is: AUTO)  AC  (active is: AUTO)  OP  (active is: AUTO)  ABS  
 	Feature: ON  min: 1 max 1023
-	current value is: 425
+	current value is: 256
 	absolute settings:
-	 value: 1.146362
+	 value: 0.415039
 	 min: -7.584961
 	 max: 2.413635
 Sharpness:
@@ -48,7 +48,9 @@ Sharpness:
 	Feature: ON  min: 0 max 4095
 	current value is: 512
 White Balance:
-	NOT AVAILABLE
+	RC  O/OC  MC  (active is: MAN)  AC  (active is: MAN)  OP  (active is: MAN)  
+	Feature: OFF  min: 0 max 1023
+	B/U value: 0 R/V value: 0
 Hue:
 	RC  O/OC  MC  (active is: MAN)  ABS  
 	Feature: OFF  min: 0 max 4095
@@ -74,19 +76,19 @@ Gamma:
 	 min: 0.500000
 	 max: 3.999023
 Shutter:
-	RC  MC  (active is: AUTO)  AC  (active is: AUTO)  OP  (active is: AUTO)  ABS  
+	RC  MC  (active is: MAN)  AC  (active is: MAN)  OP  (active is: MAN)  ABS  
 	min: 1 max 2161
-	current value is: 2161
+	current value is: 683
 	absolute settings:
-	 value: 0.033311
+	 value: 0.010005
 	 min: 0.000015
 	 max: 0.033311
 Gain:
 	RC  MC  (active is: AUTO)  AC  (active is: AUTO)  OP  (active is: AUTO)  ABS  
 	min: 0 max 1920
-	current value is: 1668
+	current value is: 1920
 	absolute settings:
-	 value: 14.630740
+	 value: 24.082386
 	 min: 0.000000
 	 max: 24.082386
 Iris:
@@ -96,9 +98,9 @@ Focus:
 Temperature:
 	RC  ABS  
 	min: 2231 max 4095
-	Target temp: 12005376 Current Temp: 3212
+	Target temp: 12005376 Current Temp: 3174
 	absolute settings:
-	 value: 321.160004
+	 value: 317.347504
 	 min: 0.000000
 	 max: inf
 Trigger:
